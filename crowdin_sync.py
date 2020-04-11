@@ -577,7 +577,7 @@ def main():
     if not check_dependencies():
         sys.exit(1)
 
-    xml_android = load_xml(x='%s/android/default.xml' % base_path)
+    xml_android = load_xml(x='%s/manifest/default.xml' % base_path)
     if xml_android is None:
         sys.exit(1)
 
