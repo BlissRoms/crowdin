@@ -42,11 +42,11 @@ files:
         ar: ar
         # Armenian
         hy-AM: hy
-        # Arpitan - LineageOS
+        # Arpitan
         frp: frp
         # Assamese
         as: as
-        # Asturian - LineageOS
+        # Asturian
         ast: ast-rES
         # Azerbaijani
         az: az
@@ -58,7 +58,7 @@ files:
         bn: bn
         # Bosnian
         bs: bs
-        # Breton - LineageOS
+        # Breton
         br-FR: br-rFR
         # Bulgarian
         bg: bg
@@ -88,11 +88,11 @@ files:
         en-IN: en-rIN
         # English, United Kingdom
         en-GB: en-rGB
-        # Esperanto - LineageOS
+        # Esperanto
         eo: eo
         # Estonian
         et: et
-        # Filipino - LineageOS
+        # Filipino
         fil: fil
         # Finnish
         fi: fi
@@ -100,7 +100,7 @@ files:
         fr: fr
         # French, Canada
         fr-CA: fr-rCA
-        # Frisian - LineageOS
+        # Frisian
         fy-NL: fy-rNL
         # Galician
         gl: gl
@@ -122,17 +122,17 @@ files:
         is: is
         # Indonesian
         id: in
-        # Irish - LineageOS
+        # Irish
         ga-IE: ga-rIE
         # Italian
         it: it
         # Japanese
         ja: ja
-        # Kabyle - LineageOS
+        # Kabyle
         kab: kab-rDZ
         # Kannada
         kn: kn
-        # Kashubian - LineageOS
+        # Kashubian
         csb: csb
         # Kazakh
         kk: kk
@@ -140,7 +140,7 @@ files:
         km: km
         # Korean
         ko: ko
-        # Kurdish - LineageOS
+        # Kurdish
         ku: ku
         # Kyrgyz
         ky: ky
@@ -150,9 +150,9 @@ files:
         lv: lv
         # Lithuanian
         lt: lt
-        # Luxembourgish - LineageOS
+        # Luxembourgish
         lb: lb
-        # Macedonian (FYROM)
+        # Macedonian
         mk: mk
         # Malay
         ms: ms
@@ -166,13 +166,11 @@ files:
         ne-NP: ne
         # Norwegian Bokmal
         nb: nb
-        # Occitan - LineageOS
+        # Occitan
         oc: oc
-        # Oriya
-        or: or
         # Persian
         fa: fa
-        # Pirate English - LineageOS
+        # Pirate English
         en-PT: en-rPT
         # Polish
         pl: pl
@@ -184,13 +182,13 @@ files:
         pa-IN: pa
         # Romanian
         ro: ro
-        # Romansh - LineageOS
+        # Romansh
         rm-CH: rm
         # Russian
         ru: ru
-        # Sardinian - LineageOS
+        # Sardinian
         sc: sc-rIT
-        # Scottish Gaelic - LineageOS
+        # Scottish Gaelic
         gd: gd
         # Serbian (Cyrillic)
         sr: sr
@@ -204,13 +202,13 @@ files:
         sl: sl
         # Spanish
         es-ES: es
-        # Spanish, Colombia - LineageOS
+        # Spanish, Colombia
         es-CO: es-rCO
-        # Spanish, Mexico - LineageOS
+        # Spanish, Mexico
         es-MX: es-rMX
         # Spanish, United States
         es-US: es-rUS
-        # Sundanese - LineageOS
+        # Sundanese
         su: su
         # Swahili
         sw: sw
@@ -230,15 +228,15 @@ files:
         uk: uk
         # Urdu (Pakistan)
         ur-PK: ur
-        # Uyghur - LineageOS
+        # Uyghur
         ug: ug
         # Uzbek
         uz: uz
-        # Venetian - LineageOS
+        # Venetian
         vec: vec
         # Vietnamese
         vi: vi
-        # Welsh - LineageOS
+        # Welsh
         cy: cy
         # Zulu
         zu: zu
