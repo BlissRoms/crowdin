@@ -586,11 +586,7 @@ def main():
     if xml_extra is None:
         sys.exit(1)
 
-    xml_snippet = load_xml(x='%s/android/snippets/bliss.xml' % base_path)
-    if xml_snippet is None:
-        xml_snippet = load_xml(x='%s/android/snippets/cm.xml' % base_path)
-    if xml_snippet is None:
-        xml_snippet = load_xml(x='%s/android/snippets/hal_cm_all.xml' % base_path)
+    xml_snippet = load_xml(x='%s/manifest/bliss.xml' % base_path)
     if xml_snippet is not None:
         xml_files = (xml_android, xml_snippet, xml_extra)
     else:
