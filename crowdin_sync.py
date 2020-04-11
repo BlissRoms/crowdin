@@ -3,10 +3,11 @@
 # crowdin_sync.py
 #
 # Updates Crowdin source translations and pushes translations
-# directly to LineageOS' Gerrit.
+# directly to BlissRoms's Gerrit.
 #
 # Copyright (C) 2014-2016 The CyanogenMod Project
 # Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2020 Team Bliss
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -273,7 +274,7 @@ def push_as_commit(config_files, base_path, path, name, branch, username):
 
     # Push commit
     try:
-        repo.git.push('ssh://%s@review.lineageos.org:29418/%s' % (username, name),
+        repo.git.push('ssh://%s@review.blissroms.com:29418/%s' % (username, name),
                       'HEAD:refs/for/%s%%topic=translation' % branch)
         print('Success')
     except:
@@ -285,7 +286,7 @@ def push_as_commit(config_files, base_path, path, name, branch, username):
 def submit_gerrit(branch, username):
     # Find all open translation changes
     cmd = ['ssh', '-p', '29418',
-        '{}@review.lineageos.org'.format(username),
+        '{}@review.blissroms.com'.format(username),
         'gerrit', 'query',
         'status:open',
         'branch:{}'.format(branch),
@@ -307,7 +308,7 @@ def submit_gerrit(branch, username):
             continue
         # Add Code-Review +2 and Verified+1 labels and submit
         cmd = ['ssh', '-p', '29418',
-        '{}@review.lineageos.org'.format(username),
+        '{}@review.blissroms.com'.format(username),
         'gerrit', 'review',
         '--verified +1',
         '--code-review +2',
@@ -346,9 +347,9 @@ def find_xml(base_path):
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Synchronising LineageOS' translations with Crowdin")
+        description="Synchronising BlissRoms's translations with Crowdin")
     parser.add_argument('-u', '--username', help='Gerrit username')
-    parser.add_argument('-b', '--branch', help='LineageOS branch',
+    parser.add_argument('-b', '--branch', help='BlissRoms branch',
                         required=True)
     parser.add_argument('-c', '--config', help='Custom yaml config')
     parser.add_argument('--upload-sources', action='store_true',
@@ -563,7 +564,7 @@ def main():
         sys.exit(0)
 
     base_path_branch_suffix = default_branch.replace('-', '_').replace('.', '_').upper()
-    base_path_env = 'LINEAGE_CROWDIN_BASE_PATH_%s' % base_path_branch_suffix
+    base_path_env = 'BLISS_CROWDIN_BASE_PATH_%s' % base_path_branch_suffix
     base_path = os.getenv(base_path_env)
     if base_path is None:
         cwd = os.getcwd()
@@ -585,7 +586,7 @@ def main():
     if xml_extra is None:
         sys.exit(1)
 
-    xml_snippet = load_xml(x='%s/android/snippets/lineage.xml' % base_path)
+    xml_snippet = load_xml(x='%s/android/snippets/bliss.xml' % base_path)
     if xml_snippet is None:
         xml_snippet = load_xml(x='%s/android/snippets/cm.xml' % base_path)
     if xml_snippet is None:
