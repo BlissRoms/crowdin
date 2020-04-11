@@ -581,16 +581,11 @@ def main():
     if xml_android is None:
         sys.exit(1)
 
-    xml_extra = load_xml(x='%s/config/%s_extra_packages.xml'
-                           % (_DIR, default_branch))
-    if xml_extra is None:
-        sys.exit(1)
-
     xml_snippet = load_xml(x='%s/manifest/bliss.xml' % base_path)
     if xml_snippet is not None:
-        xml_files = (xml_android, xml_snippet, xml_extra)
+        xml_files = (xml_android, xml_snippet)
     else:
-        xml_files = (xml_android, xml_extra)
+        xml_files = (xml_android)
 
     if args.config:
         files = ['%s/config/%s' % (_DIR, args.config)]
